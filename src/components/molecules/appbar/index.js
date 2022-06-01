@@ -4,7 +4,9 @@ import { drawerWidth } from "config/constant";
 const AppBar = styled(MuiAppBar, {
   shouldForwardProp: (prop) => prop !== "open",
 })(({ theme, open }) => ({
-  background: "white",
+  padding: theme.spacing(2),
+  background: "transparent",
+  zIndex: 1202,
   boxShadow: "none",
   transition: theme.transitions.create(["margin", "width"], {
     easing: theme.transitions.easing.sharp,
@@ -18,6 +20,6 @@ const AppBar = styled(MuiAppBar, {
       duration: theme.transitions.duration.enteringScreen,
     }),
   }),
-  color: theme.palette.grey[700],
+  color: theme.palette.primary.dark,
 }));
 export default AppBar;
